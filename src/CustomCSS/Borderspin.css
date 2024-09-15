@@ -1,0 +1,23 @@
+@keyframes spin-border {
+    0% {
+        filter: hue-rotate(0deg);
+      }
+      100% {
+        filter: hue-rotate(360deg);
+      }
+  }
+
+  .spin-hover:hover {
+    animation: spin-border 1s infinite linear;
+  }
+
+  @keyframes rotate-border {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+
