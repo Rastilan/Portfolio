@@ -1,12 +1,13 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import disneyGithub from '../assets/disneyplus-clone-github.jpg'
 import disneySite from '../assets/disneyplus-clone-site.jpg'
 //import portfolioSite from '../assets/portfolio-site.jpg'
 import portfolioGithub from '../assets/portfolio-github.jpg'
 import appleGithub from '../assets/apple-github.jpg'
 import appleSite from '../assets/apple-site.jpg'
-import Github from './SVGs/Github'
-import Webpage from './SVGs/Webpage'
+import PropTypes from 'prop-types';
+
+
 function Expandingslide({ project }) {
   const [isLeftExpanded, setIsLeftExpanded] = useState(false);
   const [isRightExpanded, setIsRightExpanded] = useState(false);
@@ -54,6 +55,7 @@ function Expandingslide({ project }) {
         }
     }, [project]);
 
+
   return (
     <div className="w-full h-[400px] flex overflow-hidden">
         
@@ -97,5 +99,9 @@ function Expandingslide({ project }) {
         </div>
     );
 }
+
+Expandingslide.propTypes = {
+    project: PropTypes.oneOf(['github', 'portfolio', 'apple']).isRequired,
+  };
 
 export default Expandingslide;

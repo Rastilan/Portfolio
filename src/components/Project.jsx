@@ -1,5 +1,5 @@
-import React from 'react'
 import Expandingslide from './Expandingslide'
+import PropTypes from 'prop-types'
 
 const Project = ({ proj, title, desc, languages }) => {
   return (
@@ -29,5 +29,12 @@ const Project = ({ proj, title, desc, languages }) => {
     </>
   )
 }
+
+Project.propTypes = {
+    proj: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    desc: PropTypes.string.isRequired,
+    languages: PropTypes.arrayOf(PropTypes.string).isRequired,
+  };
 
 export default Project

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import '../CustomCSS/Borderspin.css'
 const Hero = () => {
     const [isHovered, setIsHovered] = useState(false);
