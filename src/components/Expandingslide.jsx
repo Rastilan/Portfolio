@@ -40,7 +40,7 @@ function Expandingslide({ project }) {
                 setSiteAlt("This Portfolio");
                 setSiteImg(portfolioSite);
                 setSiteGif(portfolioSiteGif);
-                setSiteURL("https://disneyplus-clone-630c7.firebaseapp.com/home");
+                setSiteURL("https://portfolio-wca9.vercel.app/");
                 setGithubAlt("This Portfolio Github");
                 setGithubImg(portfolioGithub);
                 setGithubURL("https://github.com/Rastilan/Portfolio");
