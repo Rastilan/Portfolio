@@ -5,25 +5,25 @@ const Projects = () => {
   return (
     <>
         <div id="projects-section" className='px-4 md:container flex justify-center m-auto'>
-            <p><span>My recent projects {' '}</span> and what the future holds... ↓</p>
+            <p className='text-white'><span>My recent projects {' '}</span> and what the future holds... ↓</p>
         </div>
         <Project 
-            proj="github"
+            proj="disney"
             title="Disney+"
-            desc="A fullstack flashcards web app that I maintain as a valuable learning resource for both myself and the developer community. By open-sourcing this project, I aim to share knowledge and provide a practical tool for others to learn and grow in their development journey."
-            languages={['JavaScript', 'ReactJS', 'TailwindCSS']}
+            desc="A clone of the Dinsey+ streaming service layout."
+            languages={['Firebase', 'styled-components', 'Vite', 'React', 'JSON']}
         />
         <Project 
             proj="portfolio"
             title="This Portfolio"
-            desc="A fullstack flashcards web app that I maintain as a valuable learning resource for both myself and the developer community. By open-sourcing this project, I aim to share knowledge and provide a practical tool for others to learn and grow in their development journey."
-            languages={['JavaScript', 'ReactJS', 'TailwindCSS']}
+            desc="The Portfolio you are looking at currently."
+            languages={['ReactJS', 'TailwindCSS']}
         />
         <Project 
             proj="apple"
             title="Apple Site Clone"
-            desc="A fullstack flashcards web app that I maintain as a valuable learning resource for both myself and the developer community. By open-sourcing this project, I aim to share knowledge and provide a practical tool for others to learn and grow in their development journey."
-            languages={['JavaScript', 'ReactJS', 'TailwindCSS']}
+            desc="A clone of the Apple site. Involves an iPhone using ThreeJS!"
+            languages={['ReactJS', 'TailwindCSS', 'GSAP', 'ThreeJS']}
         />
     </>
   )

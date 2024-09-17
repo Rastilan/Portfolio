@@ -1,0 +1,15 @@
+@keyframes chroma-effect {
+    0% {
+        filter: hue-rotate(0deg);
+      }
+      100% {
+        filter: hue-rotate(360deg);
+      }
+  }
+
+  .chroma-effect:hover {
+    animation: chroma-effect 3s infinite linear;
+  }
+
+
+

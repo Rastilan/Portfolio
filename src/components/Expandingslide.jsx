@@ -1,10 +1,14 @@
 import { useState, useEffect } from 'react'
 import disneyGithub from '../assets/disneyplus-clone-github.jpg'
 import disneySite from '../assets/disneyplus-clone-site.jpg'
-//import portfolioSite from '../assets/portfolio-site.jpg'
+import disneySiteGif from '../assets/disneyplus-clone-video.gif'
+import portfolioSite from '../assets/portfolio-site.jpg'
+import portfolioSiteGif from '../assets/portfolio-video.gif'
 import portfolioGithub from '../assets/portfolio-github.jpg'
 import appleGithub from '../assets/apple-github.jpg'
 import appleSite from '../assets/apple-site.jpg'
+import appleSiteGif from '../assets/apple-video.gif'
+
 import PropTypes from 'prop-types';
 
 
@@ -17,41 +21,45 @@ function Expandingslide({ project }) {
   const [githubAlt, setGithubAlt] = useState(null);
   const [githubImg, setGithubImg] = useState(null);
   const [githubURL, setGithubURL] = useState(null);
+  const [siteGif, setSiteGif] = useState(null);
   
 
     // Set project details based on the passed project prop
     useEffect(() => {
         switch (project) {
-            case 'github':
-            setSiteAlt("Disney Clone");
-            setSiteImg(disneySite);
-            setSiteURL("https://disneyplus-clone-630c7.firebaseapp.com/home");
-            setGithubAlt("Disney Clone Github");
-            setGithubImg(disneyGithub);
-            setGithubURL("https://github.com/Rastilan/Disneyplus-Clone");
-            break;
+            case 'disney':
+                setSiteAlt("Disney Clone");
+                setSiteImg(disneySite);
+                setSiteGif(disneySiteGif);
+                setSiteURL("https://disneyplus-clone-630c7.firebaseapp.com/home");
+                setGithubAlt("Disney Clone Github");
+                setGithubImg(disneyGithub);
+                setGithubURL("https://github.com/Rastilan/Disneyplus-Clone");
+                break;
             case 'portfolio':
-            setSiteAlt("This Portfolio");
-            setSiteImg(portfolioGithub);
-            setSiteURL("https://disneyplus-clone-630c7.firebaseapp.com/home");
-            setGithubAlt("This Portfolio Github");
-            setGithubImg(portfolioGithub);
-            setGithubURL("https://github.com/Rastilan/Portfolio");
-            break;
+                setSiteAlt("This Portfolio");
+                setSiteImg(portfolioSite);
+                setSiteGif(portfolioSiteGif);
+                setSiteURL("https://disneyplus-clone-630c7.firebaseapp.com/home");
+                setGithubAlt("This Portfolio Github");
+                setGithubImg(portfolioGithub);
+                setGithubURL("https://github.com/Rastilan/Portfolio");
+                break;
             case 'apple':
                 setSiteAlt("Apple Site Clone");
                 setSiteImg(appleSite);
-                setSiteURL("https://disneyplus-clone-630c7.firebaseapp.com/home");
+                setSiteGif(appleSiteGif);
+                setSiteURL("https://apple-site-clone-f01fd.web.app/");
                 setGithubAlt("Apple Site Clone Github");
                 setGithubImg(appleGithub);
                 setGithubURL("https://github.com/Rastilan/Apple_Style_Site");
                 break;
             default:
-            setSiteAlt(null);
-            setSiteImg(null);
-            setGithubAlt(null);
-            setGithubImg(null);
-            break;
+                setSiteAlt(null);
+                setSiteImg(null);
+                setGithubAlt(null);
+                setGithubImg(null);
+                break;
         }
     }, [project]);
 
@@ -68,7 +76,7 @@ function Expandingslide({ project }) {
             >
                 <a href={siteURL}>
                     <img
-                    src={siteImg}
+                    src={ isLeftExpanded ? siteGif : siteImg }
                     alt={siteAlt}
                     className="w-full h-full object-cover"
                     />
@@ -101,7 +109,7 @@ function Expandingslide({ project }) {
 }
 
 Expandingslide.propTypes = {
-    project: PropTypes.oneOf(['github', 'portfolio', 'apple']).isRequired,
+    project: PropTypes.oneOf(['disney', 'portfolio', 'apple']).isRequired,
   };
 
 export default Expandingslide;
