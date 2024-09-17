@@ -8,6 +8,12 @@ const Projects = () => {
             <p className='text-white'><span>My recent projects {' '}</span> and what the future holds... ↓</p>
         </div>
         <Project 
+            proj="apple"
+            title="Apple Site Clone"
+            desc="A clone of the Apple site. Involves an iPhone using ThreeJS!"
+            languages={['ReactJS', 'TailwindCSS', 'GSAP', 'ThreeJS']}
+        />
+        <Project 
             proj="disney"
             title="Disney+"
             desc="A clone of the Dinsey+ streaming service layout."
@@ -19,12 +25,7 @@ const Projects = () => {
             desc="The Portfolio you are looking at currently."
             languages={['ReactJS', 'TailwindCSS']}
         />
-        <Project 
-            proj="apple"
-            title="Apple Site Clone"
-            desc="A clone of the Apple site. Involves an iPhone using ThreeJS!"
-            languages={['ReactJS', 'TailwindCSS', 'GSAP', 'ThreeJS']}
-        />
+
     </>
   )
 }
