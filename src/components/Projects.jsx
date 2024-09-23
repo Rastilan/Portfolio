@@ -2,6 +2,8 @@ import Project from './Project'
 
 //<Expandingslides project="portfolio"/>
 const Projects = () => {
+
+    
   return (
     <>
         <div id="projects-section" className='px-4 md:container flex justify-center m-auto'>

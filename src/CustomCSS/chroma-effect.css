@@ -1,15 +1,26 @@
-@keyframes chroma-effect {
-    0% {
-        filter: hue-rotate(0deg);
-      }
-      100% {
-        filter: hue-rotate(360deg);
-      }
+.chroma-effect {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
   }
-
   .chroma-effect:hover {
-    animation: chroma-effect 3s infinite linear;
+    animation: chroma-effect 3s linear infinite;
   }
-
-
-
+  .chroma-effect:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+  }
+  @keyframes chroma-effect {
+    0%, 100% { border-color: red; }
+    16.666% { border-color: yellow; }
+    33.333% { border-color: lime; }
+    50% { border-color: cyan; }
+    66.666% { border-color: blue; }
+    83.333% { border-color: magenta; }
+}
+      

@@ -1,15 +1,74 @@
+import gsap from 'gsap'
 import Expandingslide from './Expandingslide'
 import PropTypes from 'prop-types'
+import { useEffect, useRef } from 'react'
+
 
 const Project = ({ proj, title, desc, languages }) => {
+    const pagesRef = useRef(null);
+    const descriptionRef = useRef(null);
+
+    useEffect(() => {
+        const pages = pagesRef.current
+        const description = descriptionRef.current
+    
+        // Create a GSAP context
+        const ctx = gsap.context(() => {
+          // Animate the section
+          gsap.fromTo(pages, 
+            {
+              opacity: 0,
+              xPercent: -100,
+              
+            },
+            {
+              opacity: 1,
+              xPercent: 0,
+              duration: 1,
+              ease: "power3.out",
+              scrollTrigger: {
+                trigger: pages,
+                start: "top 80%",
+                end: "bottom 20%",
+                toggleActions: "play none none reverse"
+              }
+            }
+          )
+    
+          // Animate the skill elements
+          gsap.fromTo(description, 
+            {
+              opacity: 0,
+              xPercent: 100,
+            },
+            {
+              opacity: 1,
+              xPercent: 0,
+              duration: 1,
+              ease: "power3.out",
+              scrollTrigger: {
+                trigger: description,
+                start: "top 80%",
+                end: "bottom 50%",
+                toggleActions: "play none none reverse"
+              }
+            }
+          )
+        }, pagesRef) // Scope the context to the section
+    
+        // Cleanup function
+        return () => ctx.revert()
+      }, [])
+
+
   return (
     <>
-    <div className='flex md:w-[70vw] w-[100vw] m-auto text-white md:flex-row flex-col-reverse chroma-effect'>
-        <div className='flex flex-col items-center w-full'>
+    <div  className='flex md:w-[70vw] w-[100vw] m-auto text-white md:flex-row flex-col-reverse bg-black'>
+        <div ref={pagesRef} className='flex flex-col items-center w-full'>
             {/* Pass project prop to Expandingslide */}
             <Expandingslide project={proj} />
         </div>
-        <div className='relative w-full md:pl-10 md:pr-4 m-auto flex flex-col'>
+        <div ref={descriptionRef} className='relative w-full md:pl-10 md:pr-4 m-auto flex flex-col'>
 
             {/* The Title in for the projects*/}
             <h1 className='p-10 text-2xl font-bold'>{title}</h1>
