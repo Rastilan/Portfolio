@@ -49,7 +49,7 @@ const Project = ({ proj, title, desc, languages }) => {
               scrollTrigger: {
                 trigger: description,
                 start: "top 80%",
-                end: "bottom 50%",
+                end: "bottom 20%",
                 toggleActions: "play none none reverse"
               }
             }
