@@ -24,11 +24,11 @@ export default function AboutSection() {
       gsap.fromTo(section, 
         {
           opacity: 0,
-          x: 450
+          xPercent: 100
         },
         {
           opacity: 1,
-          x: 0,
+          xPercent: 0,
           duration: 1,
           ease: "power3.out",
           scrollTrigger: {
@@ -54,8 +54,8 @@ export default function AboutSection() {
           ease: "power3.out",
           scrollTrigger: {
             trigger: skillsRef.current,
-            start: "top 100%",
-            end: "bottom 50%",
+            start: "top 80%",
+            end: "bottom 20%",
             toggleActions: "play none none reverse"
           }
         }
@@ -67,7 +67,7 @@ export default function AboutSection() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="py-12 px-4 max-w-6xl mx-auto">
+    <section ref={sectionRef} className="py-12 px-4 max-w-6xl mx-auto relative">
       <h2 className="text-3xl font-bold text-center mb-8 text-white">About Me</h2>
       <div className="grid md:grid-cols-2 gap-8">
         <div className="p-6 rounded-lg shadow-md border-2">
@@ -78,16 +78,10 @@ export default function AboutSection() {
             A Bit About Me
           </h3>
           <p className="text-white mb-4">
-            Hello! I'm a passionate web developer with a keen eye for creating 
-            elegant, efficient, and user-friendly websites. With a background 
-            in computer science and years of hands-on experience, I've honed 
-            my skills in both front-end and back-end technologies.
+            Hello! I'm a web developer who is always interested in creating something new and exciting.
           </p>
           <p className="text-white ">
-            I love turning complex problems into simple, beautiful, and intuitive 
-            designs. When I'm not coding, you can find me exploring new technologies, 
-            contributing to open-source projects, or enjoying a good book on software 
-            architecture.
+            I love solving complex problems! Breaking down issues into smaller problems to build full featured applications is as fun as it is rewarding.
           </p>
         </div>
 

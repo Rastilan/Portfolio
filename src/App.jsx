@@ -12,7 +12,7 @@ function App() {
       <Hero />
       <Projects />
       <About />
-      
+      <Contact />
     </main>
   )
 }

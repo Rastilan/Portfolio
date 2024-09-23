@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 const Project = ({ proj, title, desc, languages }) => {
   return (
     <>
-    <div className='flex md:w-[70vw] w-[100vw] m-auto text-white md:flex-row flex-col-reverse'>
+    <div className='flex md:w-[70vw] w-[100vw] m-auto text-white md:flex-row flex-col-reverse chroma-effect'>
         <div className='flex flex-col items-center w-full'>
             {/* Pass project prop to Expandingslide */}
             <Expandingslide project={proj} />
