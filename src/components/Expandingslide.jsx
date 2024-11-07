@@ -8,6 +8,9 @@ import portfolioGithub from '../assets/portfolio-github.jpg'
 import appleGithub from '../assets/apple-github.jpg'
 import appleSite from '../assets/apple-site.jpg'
 import appleSiteGif from '../assets/apple-video.gif'
+import pokemonGithub from '../assets/pokemon-github.jpg'
+import pokemonSite from '../assets/pokemon-site.jpg'
+import pokemonSiteGif from '../assets/pokemon-video.gif'
 
 import PropTypes from 'prop-types';
 
@@ -53,6 +56,15 @@ function Expandingslide({ project }) {
                 setGithubAlt("Apple Site Clone Github");
                 setGithubImg(appleGithub);
                 setGithubURL("https://github.com/Rastilan/Apple_Style_Site");
+                break;
+            case 'pokemoncard':
+                setSiteAlt("Pokemon Card Sim");
+                setSiteImg(pokemonSite);
+                setSiteGif(pokemonSiteGif);
+                setSiteURL("https://pokemon-card-sim.vercel.app/");
+                setGithubAlt("Pokemon Card Sim");
+                setGithubImg(pokemonGithub);
+                setGithubURL("https://github.com/Rastilan/PokemonCardSim");
                 break;
             default:
                 setSiteAlt(null);

@@ -22,11 +22,18 @@ const Projects = () => {
             languages={['Firebase', 'styled-components', 'Vite', 'React', 'JSON']}
         />
         <Project 
+            proj="pokemoncard"
+            title="Pokemon Card Sim"
+            desc="This is a custom component that can be used in other projects. Refresh to get different cards."
+            languages={['ReactJS', 'TailwindCSS', 'Typescript']}
+        />
+        <Project 
             proj="portfolio"
             title="This Portfolio"
             desc="The Portfolio you are looking at currently. Its always a work in progress and is a short look into my work!"
             languages={['ReactJS', 'TailwindCSS']}
         />
+
 
     </>
   )
